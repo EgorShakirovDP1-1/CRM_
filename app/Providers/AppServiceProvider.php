@@ -2,6 +2,13 @@
 
 namespace App\Providers;
 
+use App\Contracts\Integrations\CalendarPort;
+use App\Contracts\Integrations\MailPort;
+use App\Contracts\Integrations\PaymentPort;
+use App\Contracts\Integrations\RiskDataPort;
+use App\Contracts\Integrations\SignaturePort;
+use App\Integrations\UnconfiguredProvider;
+use App\Support\TenantContext;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +22,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(TenantContext::class, fn (): TenantContext => new TenantContext);
+        foreach ([MailPort::class, CalendarPort::class, PaymentPort::class, SignaturePort::class, RiskDataPort::class] as $port) {
+            $this->app->bind($port, UnconfiguredProvider::class);
+        }
     }
 
     /**

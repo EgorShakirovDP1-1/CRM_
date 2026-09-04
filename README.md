@@ -1,27 +1,44 @@
-# Laravel + Vue Starter Kit
+# Nexus CRM
 
-## Introduction
+Production-oriented multi-tenant CRM based on the included Draw.io ER, class and use-case diagrams.
 
-Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).
+## Stack
 
-Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+- PHP 8.3+ and Laravel 13
+- Vue 3, TypeScript, Inertia 3 and Tailwind CSS 4
+- PostgreSQL 18 with Row-Level Security
+- Redis queues/cache, S3-compatible object storage and Mailpit for local email
+- Laravel Fortify (email verification, password reset, 2FA and passkeys) and Sanctum API authentication
 
-This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+## Start on Windows or Linux Mint
 
-## Official Documentation
+Requirements: Docker Desktop on Windows (WSL2 backend) or Docker Engine + Compose on Linux.
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+```bash
+cp .env.example .env
+docker compose up -d --build
+docker compose exec app composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan migrate --seed
+```
 
-## Contributing
+Open http://localhost:8000. Mailpit is at http://localhost:8025 and MinIO Console at http://localhost:9001.
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Demo account after seeding: `owner@nexus.test` / `ChangeMe123!`. Change it immediately outside local development.
 
-All contributions to the Starter Kits from now on should be made through [Maestro](https://github.com/laravel/maestro).
+## Quality checks
 
-## Code of Conduct
+```bash
+docker compose exec app php artisan test
+docker compose exec app vendor/bin/pint --test
+docker compose exec node pnpm run types:check
+docker compose exec node pnpm run build
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The REST contract is available at `/api/documentation` and `/openapi.yaml`. First-party Vue requests use secure session cookies; integrations may use scoped Sanctum bearer tokens and must send `X-Organization-Id`.
 
-## License
+Customer CSV import/export is available in the CRM screen and through `/api/v1/customers/import` and `/api/v1/customers/export`. The header is `display_name,type,status,preferred_language,risk_level`; both comma and semicolon delimiters are accepted on import, and each import is atomic and limited to 5,000 rows.
 
-The Laravel + Vue starter kit is open-sourced software licensed under the MIT license.
+The scheduler runs `crm:scan-pending` every 15 minutes. It creates a task and notification for an important inbound message that has no later reply, then raises the task priority and notifies a manager when the configured business-day escalation limit is reached.
+
+See [architecture](docs/ARCHITECTURE.md) for tenant isolation and module boundaries. Provider credentials must be kept in a secret manager and referenced by `credential_ref`.

@@ -3,6 +3,7 @@ import { usePage } from '@inertiajs/vue3';
 import AppLogoIcon from '@/components/AppLogoIcon.vue';
 
 const name = usePage().props.name;
+const organization = usePage().props.auth.organization;
 </script>
 
 <template>
@@ -13,7 +14,7 @@ const name = usePage().props.name;
     </div>
     <div class="ml-1 grid flex-1 text-left text-sm">
         <span class="mb-0.5 truncate leading-tight font-semibold">{{
-            name
+            organization?.name ?? name
         }}</span>
     </div>
 </template>

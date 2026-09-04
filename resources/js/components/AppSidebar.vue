@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, FolderGit2, LayoutGrid } from '@lucide/vue';
+import {
+    CalendarDays,
+    CircleGauge,
+    FileJson2,
+    Files,
+    LayoutDashboard,
+    MessagesSquare,
+    ShieldCheck,
+    UsersRound,
+    WalletCards,
+} from '@lucide/vue';
 import AppLogo from '@/components/AppLogo.vue';
 import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
@@ -14,27 +24,35 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
 import type { NavItem } from '@/types';
+import { useI18n } from '@/composables/useI18n';
+
+const { t } = useI18n();
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
-        href: dashboard(),
-        icon: LayoutGrid,
+        title: t('dashboard'),
+        href: '/dashboard',
+        icon: LayoutDashboard,
     },
+    { title: t('team'), href: '/modules/team', icon: UsersRound },
+    { title: t('crm'), href: '/modules/crm', icon: CircleGauge },
+    { title: t('booking'), href: '/modules/booking', icon: CalendarDays },
+    {
+        title: t('communications'),
+        href: '/modules/communications',
+        icon: MessagesSquare,
+    },
+    { title: t('documents'), href: '/modules/documents', icon: Files },
+    { title: t('finance'), href: '/modules/finance', icon: WalletCards },
+    { title: t('risk'), href: '/modules/risk', icon: ShieldCheck },
 ];
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/vue-starter-kit',
-        icon: FolderGit2,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#vue',
-        icon: BookOpen,
+        title: t('api'),
+        href: '/api/documentation',
+        icon: FileJson2,
     },
 ];
 </script>
@@ -45,7 +63,7 @@ const footerNavItems: NavItem[] = [
             <SidebarMenu>
                 <SidebarMenuItem>
                     <SidebarMenuButton size="lg" as-child>
-                        <Link :href="dashboard()">
+                        <Link href="/dashboard">
                             <AppLogo />
                         </Link>
                     </SidebarMenuButton>
@@ -54,7 +72,7 @@ const footerNavItems: NavItem[] = [
         </SidebarHeader>
 
         <SidebarContent>
-            <NavMain :items="mainNavItems" />
+            <NavMain :items="mainNavItems" :label="t('navigation')" />
         </SidebarContent>
 
         <SidebarFooter>

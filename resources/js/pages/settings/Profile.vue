@@ -15,6 +15,7 @@ import { edit } from '@/routes/profile';
 /* @chisel-email-verification */
 import { send } from '@/routes/verification';
 /* @end-chisel-email-verification */
+import type { User } from '@/types';
 
 defineOptions({
     layout: {
@@ -28,7 +29,7 @@ defineOptions({
 });
 
 const page = usePage();
-const user = computed(() => page.props.auth.user);
+const user = computed(() => page.props.auth.user as User);
 </script>
 
 <template>

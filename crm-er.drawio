@@ -1,0 +1,847 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-09-04T00:00:00.000Z" agent="Codex CRM architecture generator" version="24.7.17" type="device" compressed="false">
+  <diagram id="er-overview" name="00 — Карта модели">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;CRM — карта предметной модели&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;Стрелки показывают ключевые зависимости модулей; физические таблицы раскрыты на следующих страницах&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tenant" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Организации и доступ&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;organization · branch · user&lt;br&gt;employee · role · schedule&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;CRM и продажи&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;lead · customer · contact&lt;br&gt;deal · pipeline · task · campaign&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="570" y="130" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="booking" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Запись и календарь&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;service · appointment · resource&lt;br&gt;availability · waitlist · package&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="130" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="comms" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Коммуникации&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;email · Telegram · WhatsApp&lt;br&gt;AI importance · pending case&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="docs" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Документы и ЭП&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;template · document · version&lt;br&gt;approval · signature&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="570" y="430" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="money" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Финансы и склад&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;order · invoice · payment&lt;br&gt;purchase · warehouse · stock&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="430" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Прогнозы и риск&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;assessment · forecast · factors&lt;br&gt;model version · human review&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="730" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="privacy" value="&lt;div style=&quot;font-size:16px;text-align:center&quot;&gt;&lt;b&gt;Privacy и аудит&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:center&quot;&gt;consent · retention · DSR&lt;br&gt;audit · breach · cookie choice&lt;/div&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="730" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oe1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="tenant" target="crm">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="tenant" target="booking">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="tenant" target="comms">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="booking">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="comms">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="docs">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="money">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="booking" target="money">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="comms" target="ai">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="ai">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="money" target="ai">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="tenant" target="privacy">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="crm" target="privacy">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="docs" target="privacy">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ai" target="privacy">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="overview_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Архитектурное правило: tenant_id (= organization_id) участвует во всех индексах уникальности и политиках Row-Level Security. Роли предопределены системой; компании не создают произвольные роли. Персональные данные не хранятся в cookies.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="730" width="390" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-access" name="01 — Организации, пользователи и доступ">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;01 — Организации, пользователи и доступ&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;organizations&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; slug: varchar&lt;br&gt;name: varchar&lt;br&gt;timezone: varchar&lt;br&gt;data_region: enum(EU)&lt;br&gt;unanswered_business_days: int = 5&lt;br&gt;status: enum&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;branches&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;address_json: jsonb&lt;br&gt;timezone: varchar&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;users&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; email: citext&lt;br&gt;phone: varchar?&lt;br&gt;password_hash: varchar?&lt;br&gt;mfa_enabled: bool&lt;br&gt;status: enum&lt;br&gt;last_login_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;employees&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; branch_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; user_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; manager_id? → employees&lt;br&gt;first_name: varchar&lt;br&gt;last_name: varchar&lt;br&gt;job_title: varchar&lt;br&gt;hire_date: date&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;organization_users&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; user_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id?&lt;br&gt;status: enum&lt;br&gt;joined_at: timestamptz&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; organization_id + user_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;roles&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: smallint&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; code: enum&lt;br&gt;name_ru: varchar&lt;br&gt;rank: int&lt;br&gt;is_system: bool = true&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;owner/superadmin/admin/manager/worker/accountant/supply_manager&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;permissions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: smallint&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; code: varchar&lt;br&gt;module: varchar&lt;br&gt;action: enum&lt;br&gt;description: varchar&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;role_permissions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; role_id + permission_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; role_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; permission_id&lt;br&gt;allowed: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;user_roles&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_user_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; role_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; branch_id?&lt;br&gt;assigned_by_user_id&lt;br&gt;assigned_at: timestamptz&lt;br&gt;revoked_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;work_schedules&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id&lt;br&gt;timezone: varchar&lt;br&gt;valid_from: date&lt;br&gt;valid_to: date?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;work_shifts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; schedule_id&lt;br&gt;starts_at: timestamptz&lt;br&gt;ends_at: timestamptz&lt;br&gt;breaks_json: jsonb&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;work_plans&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id&lt;br&gt;period_type: enum(day/week/month)&lt;br&gt;period_start: date&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;work_plan_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; work_plan_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; task_id?&lt;br&gt;title: varchar&lt;br&gt;due_at: timestamptz?&lt;br&gt;priority: enum&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;business_calendars&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;country_code: char(2)&lt;br&gt;weekend_days: int[]&lt;br&gt;timezone: varchar&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;business_holidays&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; business_calendar_id&lt;br&gt;date: date&lt;br&gt;name: varchar&lt;br&gt;is_working_day_override: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;audit_logs&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; actor_user_id?&lt;br&gt;action: varchar&lt;br&gt;entity_type: varchar&lt;br&gt;entity_id: uuid?&lt;br&gt;metadata_json: jsonb&lt;br&gt;ip_address: inet?&lt;br&gt;created_at: timestamptz&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;append-only; неизменяемый журнал&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="945" width="350" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e2">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e5" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e7" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e10" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e12">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r14" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r15" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e14">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r16" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e14" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r17" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e16">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r18" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e16">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Иерархия назначения ролей проверяется доменной политикой: owner → superadmin → admin → manager/worker/accountant/supply_manager. Таблицы roles и permissions системные и не редактируются арендаторами.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-crm" name="02 — CRM, продажи и взаимодействия">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;02 — CRM, продажи и взаимодействия&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;customers&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;type: enum(person/company/sole_trader)&lt;br&gt;display_name: varchar&lt;br&gt;owner_employee_id?&lt;br&gt;status: enum&lt;br&gt;preferred_language: varchar&lt;br&gt;risk_level: enum?&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;contacts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;first_name: varchar&lt;br&gt;last_name: varchar&lt;br&gt;email: citext?&lt;br&gt;phone: varchar?&lt;br&gt;birth_date: date?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;customer_contacts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; customer_id + contact_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; contact_id&lt;br&gt;role: varchar?&lt;br&gt;is_primary: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;leads&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; source_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; owner_employee_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; converted_customer_id?&lt;br&gt;name: varchar&lt;br&gt;email: citext?&lt;br&gt;phone: varchar?&lt;br&gt;status: enum&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;lead_sources&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;code: varchar&lt;br&gt;name: varchar&lt;br&gt;channel: enum&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;pipelines&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;entity_type: enum(deal/lead)&lt;br&gt;is_default: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;pipeline_stages&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; pipeline_id&lt;br&gt;name: varchar&lt;br&gt;position: int&lt;br&gt;probability_pct: numeric&lt;br&gt;is_won: bool&lt;br&gt;is_lost: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;deals&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; pipeline_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; stage_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; owner_employee_id&lt;br&gt;title: varchar&lt;br&gt;expected_amount: numeric(14,2)&lt;br&gt;expected_close_date: date?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;deal_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; deal_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;quantity: numeric&lt;br&gt;unit_price: numeric(14,2)&lt;br&gt;discount_amount: numeric(14,2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;tasks&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; assignee_employee_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; deal_id?&lt;br&gt;type: enum&lt;br&gt;title: varchar&lt;br&gt;due_at: timestamptz?&lt;br&gt;priority: enum&lt;br&gt;status: enum&lt;br&gt;source_type: varchar?&lt;br&gt;source_id: uuid?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;activities&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; deal_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id?&lt;br&gt;type: enum(call/meeting/email/note)&lt;br&gt;subject: varchar&lt;br&gt;occurred_at: timestamptz&lt;br&gt;details_json: jsonb&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;tags&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;color: varchar?&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; organization_id + name&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;tag_links&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; tag_id&lt;br&gt;entity_type: enum&lt;br&gt;entity_id: uuid&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; tag_id + entity_type + entity_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;campaigns&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;channel: enum&lt;br&gt;starts_at: timestamptz?&lt;br&gt;ends_at: timestamptz?&lt;br&gt;budget: numeric?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;campaign_members&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; campaign_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; lead_id?&lt;br&gt;status: enum&lt;br&gt;responded_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;reviews&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id?&lt;br&gt;rating: smallint 1..5&lt;br&gt;comment: text?&lt;br&gt;status: enum&lt;br&gt;published_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e5" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="0..1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;" edge="1" parent="1" source="e1" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e7" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e8" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e8" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e8" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r14" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r15" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e14" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r16" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r17" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r18" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e16">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Внешние FK catalog_item_id и appointment_id раскрыты на страницах 03 и 06. Полиморфная tag_links требует проверки tenant и типа сущности в сервисном слое.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-booking" name="03 — Услуги, запись и календари">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1665" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;03 — Услуги, запись и календари&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;services&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;name: varchar&lt;br&gt;duration_min: int&lt;br&gt;buffer_before_min: int&lt;br&gt;buffer_after_min: int&lt;br&gt;capacity: int&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;employee_services&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; employee_id + service_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; service_id&lt;br&gt;custom_duration_min?&lt;br&gt;custom_price?&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;locations&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; branch_id&lt;br&gt;name: varchar&lt;br&gt;address_json: jsonb&lt;br&gt;timezone: varchar&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;resources&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; location_id&lt;br&gt;type: enum(room/equipment/place)&lt;br&gt;name: varchar&lt;br&gt;capacity: int&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;availability_rules&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; resource_id?&lt;br&gt;day_of_week: smallint&lt;br&gt;start_time: time&lt;br&gt;end_time: time&lt;br&gt;valid_from/to: date?&lt;br&gt;is_available: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;appointments&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; branch_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id?&lt;br&gt;starts_at: timestamptz&lt;br&gt;ends_at: timestamptz&lt;br&gt;status: enum&lt;br&gt;source: enum&lt;br&gt;cancel_reason: text?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;appointment_services&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; service_id&lt;br&gt;employee_id?&lt;br&gt;quantity: int&lt;br&gt;price_snapshot: numeric(14,2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;appointment_resources&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; appointment_id + resource_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; resource_id&lt;br&gt;reserved_from: timestamptz&lt;br&gt;reserved_to: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;waitlist_entries&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; service_id&lt;br&gt;preferred_employee_id?&lt;br&gt;date_from/to: date&lt;br&gt;time_preferences_json: jsonb&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;subscriptions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; package_id&lt;br&gt;starts_on: date&lt;br&gt;ends_on: date?&lt;br&gt;remaining_visits: int?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;service_packages&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;price: numeric(14,2)&lt;br&gt;validity_days: int?&lt;br&gt;visits_count: int?&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;package_services&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; package_id + service_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; package_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; service_id&lt;br&gt;included_quantity: int&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;gift_certificates&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; purchaser_customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; owner_customer_id?&lt;br&gt;code_hash: varchar&lt;br&gt;initial_amount: numeric(14,2)&lt;br&gt;balance: numeric(14,2)&lt;br&gt;expires_on: date?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;loyalty_accounts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;points_balance: numeric&lt;br&gt;tier: varchar?&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; organization_id + customer_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;loyalty_transactions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; loyalty_account_id&lt;br&gt;delta: numeric&lt;br&gt;reason: varchar&lt;br&gt;source_type/id&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;calendar_connections&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; employee_id&lt;br&gt;provider: enum(google/outlook)&lt;br&gt;external_account_id: varchar&lt;br&gt;credential_ref: varchar&lt;br&gt;sync_status: enum&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;секрет хранится в vault, не в БД&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="945" width="350" height="189" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;calendar_event_links&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; calendar_connection_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; task_id?&lt;br&gt;external_event_id: varchar&lt;br&gt;sync_version: varchar?&lt;br&gt;last_synced_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e2">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e12">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e12">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e14" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e16" target="e17">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r14" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e17">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Перед подтверждением записи сервис блокировок проверяет пересечение рабочего графика, availability_rules, записей сотрудника и ресурсов. Клиент может выбрать специалиста, перенести/отменить запись и попасть в лист ожидания.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1515" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-comms" name="04 — Почта, Telegram, WhatsApp и pending">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;04 — Почта, Telegram, WhatsApp и pending&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;communication_accounts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; owner_employee_id?&lt;br&gt;provider: enum(gmail/outlook/telegram/whatsapp)&lt;br&gt;external_account_id: varchar&lt;br&gt;credential_ref: varchar&lt;br&gt;status: enum&lt;br&gt;last_synced_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;communication_threads&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;channel: enum(email/telegram/whatsapp)&lt;br&gt;subject: varchar?&lt;br&gt;external_thread_id: varchar?&lt;br&gt;assigned_employee_id?&lt;br&gt;status: enum&lt;br&gt;last_message_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;thread_participants&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; thread_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; contact_id?&lt;br&gt;address: varchar&lt;br&gt;display_name: varchar?&lt;br&gt;role: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;messages&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; thread_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; account_id&lt;br&gt;direction: enum(in/out)&lt;br&gt;external_message_id: varchar&lt;br&gt;sender: varchar&lt;br&gt;recipients_json: jsonb&lt;br&gt;subject: varchar?&lt;br&gt;body_text: text?&lt;br&gt;sent_received_at: timestamptz&lt;br&gt;delivery_status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;message_attachments&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; message_id&lt;br&gt;file_name: varchar&lt;br&gt;mime_type: varchar&lt;br&gt;size_bytes: bigint&lt;br&gt;storage_uri: varchar&lt;br&gt;checksum: varchar&lt;br&gt;malware_status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;ai_message_classifications&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; message_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; model_version_id&lt;br&gt;importance_score: numeric&lt;br&gt;is_important: bool&lt;br&gt;category: enum&lt;br&gt;rationale_json: jsonb&lt;br&gt;classified_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;unanswered_policies&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;business_days: int = 5&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; business_calendar_id&lt;br&gt;auto_create_task: bool&lt;br&gt;notify_responsible: bool&lt;br&gt;escalation_days?: int&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;pending_message_cases&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; thread_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; triggering_message_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; responsible_employee_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; policy_id&lt;br&gt;due_at: timestamptz&lt;br&gt;status: enum(open/answered/dismissed/overdue)&lt;br&gt;resolved_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;pending_case_tasks&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; pending_case_id + task_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; pending_case_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; task_id&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;bot_flows&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;channel: enum(telegram/whatsapp)&lt;br&gt;name: varchar&lt;br&gt;version: int&lt;br&gt;definition_json: jsonb&lt;br&gt;is_published: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;bot_sessions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; account_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; flow_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;external_chat_id: varchar&lt;br&gt;state: varchar&lt;br&gt;context_json: jsonb&lt;br&gt;expires_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;bot_registration_results&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; bot_session_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; order_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; payment_session_id?&lt;br&gt;status: enum&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;sync_cursors&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; communication_account_id&lt;br&gt;resource_type: varchar&lt;br&gt;cursor: text&lt;br&gt;updated_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;message_templates&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;channel: enum&lt;br&gt;name: varchar&lt;br&gt;subject_template: text?&lt;br&gt;body_template: text&lt;br&gt;variables_schema: jsonb&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;notification_deliveries&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; recipient_user_id&lt;br&gt;type: enum&lt;br&gt;channel: enum(in_app/email/push)&lt;br&gt;payload_json: jsonb&lt;br&gt;status: enum&lt;br&gt;sent_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e6">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e7" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e8" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e10" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e12">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Алгоритм pending: входящее важное сообщение → AI-классификация → расчёт due_at по business_calendar → уведомление ответственному и задача. Исходящий ответ в том же thread закрывает case. По умолчанию 5 рабочих дней, значение настраивается организацией.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-docs" name="05 — Документы, согласование и электронная подпись">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;05 — Документы, согласование и электронная подпись&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;document_templates&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;type: enum(contract/invoice/act/power_of_attorney)&lt;br&gt;name: varchar&lt;br&gt;current_version: int&lt;br&gt;variables_schema: jsonb&lt;br&gt;status: enum&lt;br&gt;created_by_user_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;template_versions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; template_id&lt;br&gt;version: int&lt;br&gt;source_file_uri: varchar&lt;br&gt;checksum: varchar&lt;br&gt;created_by_user_id&lt;br&gt;created_at: timestamptz&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; template_id + version&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;documents&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; template_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; deal_id?&lt;br&gt;type: enum&lt;br&gt;number: varchar&lt;br&gt;status: enum(draft/approval/signing/signed/rejected/void)&lt;br&gt;current_version: int&lt;br&gt;created_by_user_id&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; organization_id + number&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;document_versions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; document_id&lt;br&gt;version: int&lt;br&gt;rendered_file_uri: varchar&lt;br&gt;source_data_json: jsonb&lt;br&gt;checksum: varchar&lt;br&gt;created_by_user_id&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;document_links&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; document_id&lt;br&gt;entity_type: enum(appointment/order/invoice/purchase_order)&lt;br&gt;entity_id: uuid&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; document_id + entity_type + entity_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;approval_workflows&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;document_type: enum&lt;br&gt;name: varchar&lt;br&gt;version: int&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;approval_steps&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; workflow_id&lt;br&gt;position: int&lt;br&gt;approver_role_code?&lt;br&gt;approver_user_id?&lt;br&gt;rule_json: jsonb&lt;br&gt;is_required: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;approval_instances&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; document_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; workflow_id&lt;br&gt;workflow_version: int&lt;br&gt;status: enum&lt;br&gt;started_at: timestamptz&lt;br&gt;completed_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;approval_actions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; approval_instance_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; step_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; actor_user_id&lt;br&gt;action: enum(approve/reject/request_changes)&lt;br&gt;comment: text?&lt;br&gt;acted_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;signature_providers&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: smallint&lt;br&gt;code: enum(eParaksts/LT_state/EE_state)&lt;br&gt;name: varchar&lt;br&gt;country_code: char(2)&lt;br&gt;adapter_key: varchar&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#eeeeee;strokeColor=#999999;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;signature_requests&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; document_version_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; provider_id&lt;br&gt;external_request_id: varchar?&lt;br&gt;status: enum&lt;br&gt;expires_at: timestamptz?&lt;br&gt;signed_file_uri: varchar?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;signature_participants&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; signature_request_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; user_id?&lt;br&gt;name: varchar&lt;br&gt;identifier_ref: varchar?&lt;br&gt;sign_order: int&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;signature_events&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; signature_request_id&lt;br&gt;provider_event_id: varchar&lt;br&gt;type: varchar&lt;br&gt;payload_hash: varchar&lt;br&gt;occurred_at: timestamptz&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;webhook payload хранится минимально&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;file_objects&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;storage_uri: varchar&lt;br&gt;file_name: varchar&lt;br&gt;mime_type: varchar&lt;br&gt;size_bytes: bigint&lt;br&gt;checksum: varchar&lt;br&gt;encryption_key_ref: varchar&lt;br&gt;retention_until: date?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e2">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e8" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e7" target="e9">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e10" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e12">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r14" value="логическая ссылка" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;" edge="1" parent="1" source="e14" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Подписание разрешается только для утверждённой неизменяемой document_version. Интеграции eParaksts и государственных провайдеров Литвы/Эстонии реализуются через единый adapter_key.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-finance" name="06 — Каталог, платежи, управленческий учёт и склад">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1665" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;06 — Каталог, платежи, управленческий учёт и склад&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;catalog_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;type: enum(product/service)&lt;br&gt;sku: varchar?&lt;br&gt;name: varchar&lt;br&gt;unit: varchar&lt;br&gt;tax_rate_pct: numeric&lt;br&gt;is_active: bool&lt;br&gt;&lt;b&gt;UQ&lt;/b&gt; organization_id + sku&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;price_lists&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;currency: char(3)&lt;br&gt;valid_from/to: date?&lt;br&gt;is_default: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;price_list_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; price_list_id + catalog_item_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; price_list_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;price: numeric(14,2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;customer_orders&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; appointment_id?&lt;br&gt;number: varchar&lt;br&gt;currency: char(3)&lt;br&gt;total_amount: numeric(14,2)&lt;br&gt;status: enum&lt;br&gt;created_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;customer_order_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; order_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;quantity: numeric&lt;br&gt;unit_price: numeric(14,2)&lt;br&gt;tax_amount: numeric(14,2)&lt;br&gt;line_total: numeric(14,2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;payment_sessions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; order_id&lt;br&gt;provider: varchar&lt;br&gt;external_session_id: varchar&lt;br&gt;checkout_url: varchar&lt;br&gt;amount: numeric(14,2)&lt;br&gt;currency: char(3)&lt;br&gt;status: enum&lt;br&gt;expires_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;payments&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; order_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; payment_session_id&lt;br&gt;external_payment_id: varchar&lt;br&gt;amount: numeric(14,2)&lt;br&gt;currency: char(3)&lt;br&gt;method: enum(external_card/cash/transfer)&lt;br&gt;status: enum&lt;br&gt;paid_at: timestamptz?&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;CK amount = order.total_amount; частичных оплат нет&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;invoices&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; order_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;number: varchar&lt;br&gt;issued_on: date&lt;br&gt;due_on: date?&lt;br&gt;total_amount: numeric(14,2)&lt;br&gt;status: enum&lt;br&gt;document_id?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;financial_categories&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;type: enum(income/expense)&lt;br&gt;name: varchar&lt;br&gt;parent_id?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;financial_transactions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; category_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; payment_id?&lt;br&gt;type: enum(income/expense)&lt;br&gt;amount: numeric(14,2)&lt;br&gt;currency: char(3)&lt;br&gt;occurred_on: date&lt;br&gt;description: text?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;suppliers&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;name: varchar&lt;br&gt;registration_no: varchar?&lt;br&gt;email: citext?&lt;br&gt;phone: varchar?&lt;br&gt;address_json: jsonb&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;warehouses&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; branch_id?&lt;br&gt;name: varchar&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;stock_balances&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; warehouse_id + catalog_item_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; warehouse_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;quantity: numeric&lt;br&gt;reserved_quantity: numeric&lt;br&gt;reorder_level: numeric&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;stock_movements&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; warehouse_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;type: enum(receipt/issue/writeoff/adjustment/reserve)&lt;br&gt;quantity_delta: numeric&lt;br&gt;source_type/id&lt;br&gt;occurred_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;purchase_orders&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; supplier_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; warehouse_id&lt;br&gt;number: varchar&lt;br&gt;ordered_by_employee_id&lt;br&gt;expected_on: date?&lt;br&gt;total_amount: numeric(14,2)&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;purchase_order_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; purchase_order_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; catalog_item_id&lt;br&gt;quantity: numeric&lt;br&gt;received_quantity: numeric&lt;br&gt;unit_cost: numeric(14,2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="945" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;goods_receipts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; purchase_order_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; warehouse_id&lt;br&gt;received_by_employee_id&lt;br&gt;received_at: timestamptz&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;goods_receipt_items&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; goods_receipt_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; purchase_order_item_id&lt;br&gt;quantity: numeric&lt;br&gt;lot_no: varchar?&lt;br&gt;expires_on: date?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="1230" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e5">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e6">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e4" target="e8">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e9" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e7" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r12" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e13">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r13" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e14">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r14" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e14">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r15" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e11" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r16" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e15">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r17" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e15" target="e16">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r18" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e16">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r19" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e15" target="e17">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r20" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e17" target="e18">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r21" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e16" target="e18">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Оплата создаётся внешним checkout-провайдером и подтверждается подписанным webhook. Частичная оплата запрещена инвариантом. Управленческий учёт строится по financial_transactions; склад — по движениям с материализованным остатком.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1515" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="er-ai-privacy" name="07 — Прогнозы, благонадёжность и защита данных">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:22px&quot;&gt;&lt;b&gt;07 — Прогнозы, благонадёжность и защита данных&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:11px;color:#555555&quot;&gt;ERD • UUID • PostgreSQL • snake_case • все бизнес-таблицы содержат organization_id, если не указано иначе&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;data_source_registry&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;code: varchar&lt;br&gt;name: varchar&lt;br&gt;country_code: char(2)?&lt;br&gt;type: enum(internal/lursoft/state/other)&lt;br&gt;lawful_use_notes: text&lt;br&gt;adapter_key: varchar&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;external_checks&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; data_source_id&lt;br&gt;purpose: varchar&lt;br&gt;legal_basis_id&lt;br&gt;consent_id?&lt;br&gt;request_hash: varchar&lt;br&gt;result_ref: varchar&lt;br&gt;status: enum&lt;br&gt;checked_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="90" width="350" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;risk_assessments&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; model_version_id&lt;br&gt;type: enum(reliability/solvency/payment_risk)&lt;br&gt;score: numeric&lt;br&gt;risk_level: enum&lt;br&gt;explanation_json: jsonb&lt;br&gt;assessed_at: timestamptz&lt;br&gt;expires_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="90" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;risk_factors&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; risk_assessment_id&lt;br&gt;code: varchar&lt;br&gt;value_json: jsonb&lt;br&gt;contribution: numeric&lt;br&gt;source_check_id?&lt;br&gt;description: text&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="90" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;forecast_models&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;name: varchar&lt;br&gt;type: enum(conversion/revenue/churn/delinquency/credit)&lt;br&gt;owner: varchar&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;model_versions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; model_id&lt;br&gt;version: varchar&lt;br&gt;artifact_ref: varchar&lt;br&gt;features_schema: jsonb&lt;br&gt;metrics_json: jsonb&lt;br&gt;approved_at: timestamptz?&lt;br&gt;retired_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="375" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;customer_forecasts&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; model_version_id&lt;br&gt;horizon_days: int&lt;br&gt;value: numeric&lt;br&gt;confidence: numeric?&lt;br&gt;explanation_json: jsonb&lt;br&gt;calculated_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="375" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;human_reviews&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;entity_type: enum(risk/forecast)&lt;br&gt;entity_id: uuid&lt;br&gt;reviewer_user_id&lt;br&gt;decision: enum(accept/override/reject)&lt;br&gt;reason: text&lt;br&gt;reviewed_at: timestamptz&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d0cee2;strokeColor=#56517e;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="375" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;privacy_policy_versions&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;version: varchar&lt;br&gt;locale: varchar&lt;br&gt;content_uri: varchar&lt;br&gt;effective_from: timestamptz&lt;br&gt;checksum: varchar&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;consents&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; policy_version_id&lt;br&gt;purpose: varchar&lt;br&gt;scope_json: jsonb&lt;br&gt;status: enum(granted/withdrawn)&lt;br&gt;granted_at: timestamptz&lt;br&gt;withdrawn_at: timestamptz?&lt;br&gt;evidence_ref: varchar&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="660" width="350" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;legal_basis_records&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;processing_purpose: varchar&lt;br&gt;legal_basis: enum&lt;br&gt;data_categories: text[]&lt;br&gt;retention_policy_id&lt;br&gt;approved_by_user_id&lt;br&gt;valid_from/to: date?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="660" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;retention_policies&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;entity_type: varchar&lt;br&gt;retention_days: int&lt;br&gt;trigger_event: varchar&lt;br&gt;action: enum(delete/anonymize/archive)&lt;br&gt;is_active: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="660" width="350" height="167" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;data_subject_requests&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id&lt;br&gt;type: enum(access/export/correct/delete/restrict/object)&lt;br&gt;status: enum&lt;br&gt;received_at: timestamptz&lt;br&gt;due_at: timestamptz&lt;br&gt;completed_at: timestamptz?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="945" width="350" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;data_erasure_jobs&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; request_id?&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; retention_policy_id?&lt;br&gt;entity_type/id&lt;br&gt;mode: enum(delete/anonymize)&lt;br&gt;status: enum&lt;br&gt;executed_at: timestamptz?&lt;br&gt;result_json: jsonb&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="945" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;cookie_preferences&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; customer_id?&lt;br&gt;anonymous_visitor_id?&lt;br&gt;policy_version: varchar&lt;br&gt;necessary: bool = true&lt;br&gt;analytics: bool&lt;br&gt;marketing: bool&lt;br&gt;updated_at: timestamptz&lt;/div&gt;&lt;div style=&quot;color:#666666&quot;&gt;&lt;i&gt;только web-cookie preferences; не CRM-досье&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="350" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="&lt;div style=&quot;font-size:14px;text-align:center&quot;&gt;&lt;b&gt;security_incidents&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #888&quot;&gt;&lt;div style=&quot;line-height:1.35&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id: uuid&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; organization_id&lt;br&gt;type: enum&lt;br&gt;severity: enum&lt;br&gt;detected_at: timestamptz&lt;br&gt;contained_at: timestamptz?&lt;br&gt;authority_notified_at: timestamptz?&lt;br&gt;subjects_notified_at: timestamptz?&lt;br&gt;status: enum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="945" width="350" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e1" target="e2">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r2" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e2" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r3" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e3" target="e4">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r4" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e5" target="e6">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r5" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r6" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e6" target="e3">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r7" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e9" target="e10">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r8" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e11">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r9" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e13" target="e14">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r10" value="1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=0;" edge="1" parent="1" source="e12" target="e14">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="r11" value="0..1 : 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#555555;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;" edge="1" parent="1" source="e10" target="e2">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="page_note" value="&lt;div style=&quot;font-size:11px&quot;&gt;Любая внешняя проверка фиксирует цель, правовое основание, источник, согласие (если требуется) и минимизированную ссылку на результат. Автоматический прогноз не должен быть единственным основанием юридически значимого решения: предусмотрены объяснение, версия модели и human review.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1230" width="1580" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

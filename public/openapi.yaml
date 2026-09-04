@@ -1,0 +1,428 @@
+openapi: 3.1.0
+info:
+    title: Nexus CRM API
+    version: 1.0.0
+    description: Tenant-isolated API for customers, leads, deals, tasks and appointments, including CSV transfer, search and filters.
+servers:
+    - url: /api/v1
+security:
+    - sanctumBearer: []
+components:
+    parameters:
+        OrganizationHeader:
+            name: X-Organization-Id
+            in: header
+            required: true
+            schema: { type: string, format: uuid }
+            description: Organization selected for this request.
+    securitySchemes:
+        sanctumBearer:
+            type: http
+            scheme: bearer
+    schemas:
+        Customer:
+            type: object
+            required: [type, display_name]
+            properties:
+                id: { type: string, format: uuid, readOnly: true }
+                type: { type: string, enum: [person, company, sole_trader] }
+                display_name: { type: string, maxLength: 255 }
+                owner_employee_id: { type: [string, 'null'], format: uuid }
+                preferred_language:
+                    { type: string, enum: [ru, en], default: ru }
+                status:
+                    {
+                        type: string,
+                        enum: [active, inactive, archived],
+                        default: active,
+                    }
+                risk_level:
+                    { type: [string, 'null'], enum: [low, medium, high, null] }
+        Lead:
+            type: object
+            required: [name]
+            properties:
+                id: { type: string, format: uuid, readOnly: true }
+                name: { type: string }
+                email: { type: [string, 'null'], format: email }
+                phone: { type: [string, 'null'] }
+                source_id: { type: [string, 'null'], format: uuid }
+                owner_employee_id: { type: [string, 'null'], format: uuid }
+                status:
+                    {
+                        type: string,
+                        enum: [new, qualified, converted, disqualified],
+                    }
+        Deal:
+            type: object
+            required:
+                [
+                    customer_id,
+                    pipeline_id,
+                    stage_id,
+                    owner_employee_id,
+                    title,
+                    expected_amount,
+                ]
+            properties:
+                id: { type: string, format: uuid, readOnly: true }
+                customer_id: { type: string, format: uuid }
+                pipeline_id: { type: string, format: uuid }
+                stage_id: { type: string, format: uuid }
+                owner_employee_id: { type: string, format: uuid }
+                title: { type: string }
+                expected_amount: { type: number, minimum: 0 }
+                expected_close_date: { type: [string, 'null'], format: date }
+                status: { type: string, enum: [open, won, lost] }
+        Task:
+            type: object
+            required: [assignee_employee_id, title]
+            properties:
+                id: { type: string, format: uuid, readOnly: true }
+                assignee_employee_id: { type: string, format: uuid }
+                customer_id: { type: [string, 'null'], format: uuid }
+                deal_id: { type: [string, 'null'], format: uuid }
+                title: { type: string }
+                priority: { type: string, enum: [low, normal, high, urgent] }
+                status:
+                    {
+                        type: string,
+                        enum: [open, in_progress, completed, cancelled],
+                    }
+                due_at: { type: [string, 'null'], format: date-time }
+        Appointment:
+            type: object
+            required: [customer_id, branch_id, starts_at, ends_at]
+            properties:
+                id: { type: string, format: uuid, readOnly: true }
+                customer_id: { type: string, format: uuid }
+                branch_id: { type: string, format: uuid }
+                employee_id: { type: [string, 'null'], format: uuid }
+                resource_ids:
+                    {
+                        type: array,
+                        maxItems: 20,
+                        items: { type: string, format: uuid },
+                        writeOnly: true,
+                    }
+                starts_at: { type: string, format: date-time }
+                ends_at: { type: string, format: date-time }
+                status:
+                    {
+                        type: string,
+                        enum:
+                            [pending, confirmed, completed, cancelled, no_show],
+                    }
+                source: { type: string, enum: [staff, web, bot, api] }
+        Paginated:
+            type: object
+            properties:
+                current_page: { type: integer }
+                data: { type: array, items: { type: object } }
+                per_page: { type: integer }
+                total: { type: integer }
+        Error:
+            type: object
+            properties:
+                message: { type: string }
+                errors:
+                    {
+                        type: object,
+                        additionalProperties:
+                            { type: array, items: { type: string } },
+                    }
+paths:
+    /customers:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            summary: List customers
+            parameters:
+                - { name: search, in: query, schema: { type: string } }
+                - {
+                      name: type,
+                      in: query,
+                      schema:
+                          {
+                              type: string,
+                              enum: [person, company, sole_trader],
+                          },
+                  }
+                - {
+                      name: status,
+                      in: query,
+                      schema:
+                          { type: string, enum: [active, inactive, archived] },
+                  }
+                - {
+                      name: preferred_language,
+                      in: query,
+                      schema: { type: string, enum: [ru, en] },
+                  }
+                - {
+                      name: risk_level,
+                      in: query,
+                      schema: { type: string, enum: [low, medium, high] },
+                  }
+                - {
+                      name: per_page,
+                      in: query,
+                      schema: { type: integer, maximum: 100 },
+                  }
+            responses:
+                {
+                    '200':
+                        {
+                            description: Paginated customers,
+                            content:
+                                {
+                                    application/json:
+                                        {
+                                            schema:
+                                                {
+                                                    $ref: '#/components/schemas/Paginated',
+                                                },
+                                        },
+                                },
+                        },
+                }
+        post:
+            summary: Create customer
+            requestBody:
+                {
+                    required: true,
+                    content:
+                        {
+                            application/json:
+                                {
+                                    schema:
+                                        {
+                                            $ref: '#/components/schemas/Customer',
+                                        },
+                                },
+                        },
+                }
+            responses:
+                {
+                    '201': { description: Created },
+                    '422':
+                        {
+                            description: Validation error,
+                            content:
+                                {
+                                    application/json:
+                                        {
+                                            schema:
+                                                {
+                                                    $ref: '#/components/schemas/Error',
+                                                },
+                                        },
+                                },
+                        },
+                }
+    /customers/{id}:
+        parameters:
+            - { $ref: '#/components/parameters/OrganizationHeader' }
+            - {
+                  name: id,
+                  in: path,
+                  required: true,
+                  schema: { type: string, format: uuid },
+              }
+        get:
+            {
+                summary: Get customer,
+                responses:
+                    {
+                        '200': { description: Customer },
+                        '404': { description: Not found },
+                    },
+            }
+        put:
+            {
+                summary: Replace customer,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Customer',
+                                            },
+                                    },
+                            },
+                    },
+                responses: { '200': { description: Updated } },
+            }
+        patch:
+            {
+                summary: Update customer,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Customer',
+                                            },
+                                    },
+                            },
+                    },
+                responses: { '200': { description: Updated } },
+            }
+        delete:
+            {
+                summary: Delete customer,
+                responses: { '204': { description: Deleted } },
+            }
+    /customers/export:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            summary: Export customers as UTF-8 CSV
+            responses:
+                '200':
+                    description: Customer CSV
+                    content: { text/csv: { schema: { type: string } } }
+    /customers/import:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        post:
+            summary: Atomically import up to 5,000 customers from CSV
+            requestBody:
+                required: true
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            required: [file]
+                            properties:
+                                file: { type: string, format: binary }
+            responses:
+                '201': { description: Import completed }
+                '422':
+                    {
+                        description: Invalid header or row data,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Error',
+                                            },
+                                    },
+                            },
+                    }
+    /leads:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            {
+                summary: List leads,
+                responses: { '200': { description: Paginated leads } },
+            }
+        post:
+            {
+                summary: Create lead,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Lead',
+                                            },
+                                    },
+                            },
+                    },
+                responses: { '201': { description: Created } },
+            }
+    /deals:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            {
+                summary: List deals,
+                responses: { '200': { description: Paginated deals } },
+            }
+        post:
+            {
+                summary: Create deal,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Deal',
+                                            },
+                                    },
+                            },
+                    },
+                responses: { '201': { description: Created } },
+            }
+    /tasks:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            {
+                summary: List tasks,
+                responses: { '200': { description: Paginated tasks } },
+            }
+        post:
+            {
+                summary: Create task,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Task',
+                                            },
+                                    },
+                            },
+                    },
+                responses: { '201': { description: Created } },
+            }
+    /appointments:
+        parameters: [{ $ref: '#/components/parameters/OrganizationHeader' }]
+        get:
+            {
+                summary: List appointments,
+                responses: { '200': { description: Paginated appointments } },
+            }
+        post:
+            {
+                summary: Book conflict-checked appointment,
+                requestBody:
+                    {
+                        required: true,
+                        content:
+                            {
+                                application/json:
+                                    {
+                                        schema:
+                                            {
+                                                $ref: '#/components/schemas/Appointment',
+                                            },
+                                    },
+                            },
+                    },
+                responses:
+                    {
+                        '201': { description: Created },
+                        '422':
+                            { description: Slot conflict or validation error },
+                    },
+            }

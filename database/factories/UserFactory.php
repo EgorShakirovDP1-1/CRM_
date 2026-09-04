@@ -2,6 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Enums\RoleCode;
+use App\Models\Branch;
+use App\Models\Employee;
+use App\Models\Organization;
+use App\Models\OrganizationUser;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -46,6 +52,30 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    public function withOrganization(): static
+    {
+        return $this->afterCreating(function (User $user): void {
+            $organization = Organization::create([
+                'slug' => 'test-'.Str::lower(Str::random(10)), 'name' => 'Test Organization', 'timezone' => 'Europe/Riga',
+            ]);
+            $branch = Branch::create(['organization_id' => $organization->id, 'name' => 'Main', 'timezone' => 'Europe/Riga']);
+            $employee = Employee::create([
+                'organization_id' => $organization->id, 'branch_id' => $branch->id, 'user_id' => $user->id,
+                'first_name' => $user->name, 'last_name' => '', 'job_title' => 'Owner',
+            ]);
+            $membership = OrganizationUser::create([
+                'organization_id' => $organization->id, 'user_id' => $user->id, 'employee_id' => $employee->id,
+            ]);
+            $role = Role::firstOrCreate(
+                ['code' => RoleCode::Owner->value],
+                ['name_ru' => 'Владелец', 'name_en' => 'Owner', 'rank' => RoleCode::Owner->rank(), 'is_system' => true],
+            );
+            $membership->roles()->attach($role->id, [
+                'id' => (string) Str::uuid(), 'assigned_by_user_id' => $user->id, 'assigned_at' => now(),
+            ]);
+        });
     }
 
     /**
