@@ -33,7 +33,9 @@ return new class extends Migration
             $table->foreignUuid('organization_id')->constrained()->cascadeOnDelete();
             $table->foreignUuid('branch_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignUuid('user_id')->nullable()->constrained()->nullOnDelete();
-            $table->foreignUuid('manager_id')->nullable()->references('id')->on('employees')->nullOnDelete();
+            // Add the self-reference after this table exists, so PostgreSQL
+            // can validate the primary key before adding the foreign key.
+            $table->uuid('manager_id')->nullable();
             $table->string('first_name');
             $table->string('last_name')->default('');
             $table->string('job_title')->nullable();
@@ -41,6 +43,12 @@ return new class extends Migration
             $table->string('status')->default('active');
             $table->timestampsTz();
             $table->index(['organization_id', 'status']);
+        });
+        Schema::table('employees', function (Blueprint $table) {
+            $table->foreign('manager_id')
+                ->references('id')
+                ->on('employees')
+                ->nullOnDelete();
         });
         Schema::create('organization_users', function (Blueprint $table) {
             $table->uuid('id')->primary();

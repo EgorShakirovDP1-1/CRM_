@@ -91,8 +91,14 @@ return new class extends Migration
             $table->foreignUuid('organization_id')->constrained()->cascadeOnDelete();
             $table->string('type');
             $table->string('name');
-            $table->foreignUuid('parent_id')->nullable()->references('id')->on('financial_categories')->nullOnDelete();
+            $table->uuid('parent_id')->nullable();
             $table->timestampsTz();
+        });
+        Schema::table('financial_categories', function (Blueprint $table) {
+            $table->foreign('parent_id')
+                ->references('id')
+                ->on('financial_categories')
+                ->nullOnDelete();
         });
         Schema::create('financial_transactions', function (Blueprint $table) {
             $table->uuid('id')->primary();

@@ -1,134 +1,151 @@
 name: nexus-crm
 
 services:
-    app:
-        build:
-            context: .
-            dockerfile: docker/php/Dockerfile
-        working_dir: /var/www/html
-        volumes:
-            - ./:/var/www/html
-            - vendor_data:/var/www/html/vendor
-        depends_on:
-            postgres:
-                condition: service_healthy
-            redis:
-                condition: service_healthy
-        networks: [nexus]
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - vendor_data:/var/www/html/vendor
+      - storage_data:/var/www/html/storage
+      - cache_data:/var/www/html/bootstrap/cache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks: [nexus]
 
-    queue:
-        build:
-            context: .
-            dockerfile: docker/php/Dockerfile
-        working_dir: /var/www/html
-        command: php artisan queue:work --sleep=1 --tries=3 --timeout=90
-        restart: unless-stopped
-        volumes:
-            - ./:/var/www/html
-            - vendor_data:/var/www/html/vendor
-        depends_on:
-            app:
-                condition: service_started
-        networks: [nexus]
+  queue:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    working_dir: /var/www/html
+    command: php artisan queue:work --sleep=1 --tries=3 --timeout=90
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+      - vendor_data:/var/www/html/vendor
+      - storage_data:/var/www/html/storage
+      - cache_data:/var/www/html/bootstrap/cache
+    depends_on:
+      app:
+        condition: service_started
+    networks: [nexus]
 
-    scheduler:
-        build:
-            context: .
-            dockerfile: docker/php/Dockerfile
-        working_dir: /var/www/html
-        command: php artisan schedule:work
-        restart: unless-stopped
-        volumes:
-            - ./:/var/www/html
-            - vendor_data:/var/www/html/vendor
-        depends_on:
-            app:
-                condition: service_started
-        networks: [nexus]
+  scheduler:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    working_dir: /var/www/html
+    command: php artisan schedule:work
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+      - vendor_data:/var/www/html/vendor
+      - storage_data:/var/www/html/storage
+      - cache_data:/var/www/html/bootstrap/cache
+    depends_on:
+      app:
+        condition: service_started
+    networks: [nexus]
 
-    web:
-        image: nginx:1.29-alpine
-        ports:
-            - '8000:80'
-        volumes:
-            - ./:/var/www/html:ro
-            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-        depends_on: [app]
-        networks: [nexus]
+  web:
+    image: nginx:1.29-alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - storage_data:/var/www/html/storage:ro
+    depends_on: [app]
+    networks: [nexus]
 
-    node:
-        image: node:24-alpine
-        working_dir: /app
-        command: sh -lc "corepack enable && pnpm install && pnpm run dev --host 0.0.0.0"
-        ports:
-            - '5173:5173'
-        volumes:
-            - ./:/app
-            - node_modules:/app/node_modules
-        networks: [nexus]
+  node:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    working_dir: /var/www/html
+    # Docker uses compiled assets by default. Removing the hot marker prevents
+    # Laravel from advertising the container-only 0.0.0.0 address to browsers.
+    command: sh -lc "rm -f public/hot && CI=true corepack pnpm install && corepack pnpm run build"
+    volumes:
+      - ./:/var/www/html
+      - vendor_data:/var/www/html/vendor
+      - node_modules:/var/www/html/node_modules
+      - storage_data:/var/www/html/storage
+      - cache_data:/var/www/html/bootstrap/cache
+    depends_on:
+      app:
+        condition: service_started
+    networks: [nexus]
 
-    postgres:
-        image: postgres:18-alpine
-        environment:
-            POSTGRES_DB: nexus_crm
-            POSTGRES_USER: nexus
-            POSTGRES_PASSWORD: change_me
-        ports:
-            - '5432:5432'
-        volumes:
-            - postgres_data:/var/lib/postgresql/data
-        healthcheck:
-            test: ['CMD-SHELL', 'pg_isready -U nexus -d nexus_crm']
-            interval: 5s
-            timeout: 3s
-            retries: 20
-        networks: [nexus]
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: nexus_crm
+      POSTGRES_USER: nexus
+      POSTGRES_PASSWORD: change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexus -d nexus_crm"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [nexus]
 
-    redis:
-        image: redis:8.2-alpine
-        command: redis-server --appendonly yes
-        volumes:
-            - redis_data:/data
-        healthcheck:
-            test: ['CMD', 'redis-cli', 'ping']
-            interval: 5s
-            timeout: 3s
-            retries: 20
-        networks: [nexus]
+  redis:
+    image: redis:8.2-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [nexus]
 
-    minio:
-        image: minio/minio:latest
-        command: server /data --console-address ":9001"
-        environment:
-            MINIO_ROOT_USER: nexus
-            MINIO_ROOT_PASSWORD: change_me_storage
-        ports:
-            - '9000:9000'
-            - '9001:9001'
-        volumes:
-            - minio_data:/data
-        networks: [nexus]
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: nexus
+      MINIO_ROOT_PASSWORD: change_me_storage
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    networks: [nexus]
 
-    minio-init:
-        image: minio/mc:latest
-        depends_on: [minio]
-        entrypoint: >
-            /bin/sh -c "until mc alias set local http://minio:9000 nexus change_me_storage; do sleep 2; done;
-            mc mb --ignore-existing local/nexus-crm"
-        networks: [nexus]
+  minio-init:
+    image: minio/mc:latest
+    depends_on: [minio]
+    entrypoint: >
+      /bin/sh -c "until mc alias set local http://minio:9000 nexus change_me_storage; do sleep 2; done;
+      mc mb --ignore-existing local/nexus-crm"
+    networks: [nexus]
 
-    mailpit:
-        image: axllent/mailpit:v1.27
-        ports:
-            - '8025:8025'
-        networks: [nexus]
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports:
+      - "8025:8025"
+    networks: [nexus]
 
 volumes:
-    postgres_data:
-    redis_data:
-    minio_data:
-    vendor_data:
-    node_modules:
+  postgres_data:
+  redis_data:
+  minio_data:
+  vendor_data:
+  node_modules:
+  storage_data:
+  cache_data:
 
 networks:
-    nexus:
+  nexus:
